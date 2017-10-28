@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Contracts\UserInterface;
-use App\Http\Requests\UserRequest;
 use App\User;
+use Illuminate\Http\Request;
 
-class UsersController extends Controller
+class UsersController extends BaseController
 {
 
     /**
@@ -26,11 +26,11 @@ class UsersController extends Controller
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index() {
-
+    public function index()
+    {
         $users = User::all();
 
-        return view('users.index')->with(['users' => $users]);
+        return view($this->namespace . 'users.index')->with(['users' => $users]);
     }
 
     /**
@@ -38,21 +38,21 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('users.form', [
+        return view($this->namespace . 'users.form', [
             'user' => new User
         ]);
     }
 
     /**
-     * @param UserRequest $request
+     * @param Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(UserRequest $request) {
+    public function store(Request $request) {
 
         $this->users->store($request->all());
 
         return redirect()
-            ->route('users.all')
+            ->route($this->namespace . 'users.all')
             ->with('success', 'Usuario registrado correctamente');
     }
 
@@ -62,8 +62,7 @@ class UsersController extends Controller
      */
     public function view(User $user)
     {
-
-        return view('users.view', [
+        return view($this->namespace . 'users.view', [
             'user'  => $user,
         ]);
     }
@@ -75,17 +74,17 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        return view('users.form', [
+        return view($this->namespace . 'users.form', [
             'user' => $user
         ]);
     }
 
     /**
-     * @param UserRequest $request
+     * @param Request $request
      * @param $user
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(UserRequest $request, $user)
+    public function update(Request $request, $user)
     {
         $user = $this->users->update($request->all(), $user);
 
@@ -106,8 +105,5 @@ class UsersController extends Controller
             ->route('users.all')
             ->with('success', 'Usuario eliminado correctamente');
     }
-
-
-
 
 }

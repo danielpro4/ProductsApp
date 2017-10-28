@@ -23,6 +23,7 @@
             @include('partials.sidebar')
             <section class="uk-width-5-6@l">
                 @include('partials.alerts')
+
                 @yield('main-panel-before')
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-header">
@@ -36,7 +37,9 @@
                     </div>
                 </div>
                 @yield('main-panel-after')
+
                 @yield('additional-panels')
+
                 <div class="uk-margin-top">
                     @include('partials.footer')
                 </div>

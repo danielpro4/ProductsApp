@@ -17,6 +17,5 @@ Route::namespace('Api')->prefix('v1')->group(function($router) {
 
     $router->get('/products', 'ProductController@index');
     $router->get('/products/{text}', 'ProductController@search');
-
 });
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
 
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
-class ProductsController extends Controller
+
+class ProductsController extends BaseController
 {
 
     /**
@@ -19,7 +19,7 @@ class ProductsController extends Controller
     {
         $products = Product::active()->orderBy('created_at', 'desc')->get();
 
-        return view('products.index', ['products' => $products]);
+        return view($this->namespace . 'products.index', ['products' => $products]);
     }
 
     /**
@@ -32,7 +32,7 @@ class ProductsController extends Controller
         $product = new Product();
         $product->active = 1;
 
-        return view('products.form', [
+        return view($this->namespace . 'products.form', [
             'product' => $product
         ]);
     }
@@ -53,7 +53,7 @@ class ProductsController extends Controller
         $product->save();
 
         return redirect()
-            ->route('products.all')
+            ->route($this->namespace . 'products.all')
             ->with('success', "Producto {$product->sku} registrado correctamente");
     }
 
@@ -65,7 +65,7 @@ class ProductsController extends Controller
      */
     public function view(Product $product)
     {
-        return view('products.view', [
+        return view($this->namespace . 'products.view', [
             'product' => $product
         ]);
     }
@@ -78,7 +78,7 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.form', [
+        return view($this->namespace . 'products.form', [
             'product' => $product
         ]);
     }
@@ -95,7 +95,7 @@ class ProductsController extends Controller
         $product->fill($request->all());
         $product->save();
 
-        return view('products.all', [
+        return view($this->namespace . 'products.all', [
             'product' => $product
         ]);
     }

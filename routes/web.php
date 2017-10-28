@@ -20,7 +20,10 @@ Auth::routes();
 Route::get('/pricing', 'HomeController@index')->name('pricing');
 Route::get('/selling', 'HomeController@selling')->name('selling');
 
-Route::group(['prefix' => 'admin/users'], function () {
+Route::group([
+    'prefix' => 'dashboard/users',
+    'namespace' => 'Dashboard'
+], function () {
 
     Route::get('/', 'UsersController@index')->name('users.all');
     Route::get('create', 'UsersController@create')->name('user.create');
@@ -35,7 +38,10 @@ Route::group(['prefix' => 'admin/users'], function () {
     //Route::get('{user}/run', 'ExecuteUsersController@index')->name('user.run');
 });
 
-Route::group(['prefix' => 'admin/products'], function () {
+Route::group([
+    'prefix' => 'dashboard/products',
+    'namespace' => 'Dashboard'
+], function () {
     Route::get('/', 'ProductsController@index')->name('products.all');
     Route::get('create', 'ProductsController@create')->name('product.create');
     Route::post('create', 'ProductsController@store');

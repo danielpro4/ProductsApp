@@ -35,7 +35,7 @@
                 <tr class="table-row">
                     <td><input class="uk-checkbox" type="checkbox"></td>
                     <td>
-                        <img class="uk-preserve-width uk-border-circle" src="images/avatar.png" width="40" alt="">
+                        <img class="uk-preserve-width uk-border-circle" src="/images/avatar.png" width="40" alt="">
 
                         <a href="{{route('user.view', $user)}}">{{str_limit($user->name, 30)}}</a>
                         <span class="uk-float-right uk-hidden@s uk-text-muted">Nombre</span>
