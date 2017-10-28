@@ -1,0 +1,320 @@
+::selection {
+  background: #5872b5;
+  color: #fff;
+  text-shadow: none;
+}
+
+html {
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.73;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #eef6fa;
+  color: #4f5a80;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a, .uk-link {
+  color: #5466c4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h4, .uk-h4 {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #5872b5;
+  font-family: Montserrat;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+}
+
+h5, .uk-h5 {
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: Montserrat;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: linear-gradient(to left, #28a5f5, #1e87f0);
+  background: linear-gradient(to left, #632d91, #bb2782);
+
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.uk-logo {
+  color: white;
+}
+
+.top-logo img,
+.uk-logo img {
+  height: auto;
+  width: 160px;
+}
+
+.uk-section {
+  padding-top: 70px;
+}
+
+.uk-navbar-nav > li > a,
+.uk-navbar-item,
+.uk-navbar-toggle {
+  height: 56px;
+}
+
+.uk-navbar-nav > li > a {
+  color: white;
+}
+
+.uk-navbar-nav > li > a:hover,
+.uk-logo:hover {
+  background: #7a2b8d;
+  color: white;
+}
+
+.uk-navbar-nav.admin > li.uk-active > a {
+  background: #8e2a8a;
+  color: white;
+}
+
+.uk-navbar-nav.admin > li.uk-active > a:hover {
+  background: #7a2b8d;
+  color: white;
+}
+
+.uk-card-default {
+  color: #4f5a80;
+  background: #fff linear-gradient(135deg, #fff, #eef6fa);
+  box-shadow: 0 15px 50px 0 rgba(85, 95, 109, 0.1);
+}
+
+.uk-button-small {
+  padding: 0 20px;
+  line-height: 28px;
+  font-size: 11px;
+  border-radius: 500px;
+}
+
+.uk-button-primary {
+  background: #5872b5 linear-gradient(135deg, #638fba, #46569e);
+  color: #fff;
+  border: 1px solid transparent;
+  box-shadow: 2px 6px 15px rgba(88, 114, 181, 0.35);
+
+  &:hover {
+    background: #4e6db5;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+.uk-card-default .uk-card-title {
+  color: #314483;
+}
+
+.uk-margin-remove {
+  margin: 0 !important;
+}
+
+.uk-card-title {
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.uk-search-selling {
+  margin: auto;
+  position: relative;
+  width: 100%;
+
+  [class*='uk-inline'] {
+    width: 100%;
+  }
+}
+
+.uk-search-input {
+  -webkit-appearance: none;
+  color: #314483;
+  border: 1px solid #dee6ed;
+  border-radius: 0px;
+  background: white !important;
+  font: inherit;
+  height: 40px;
+  overflow: visible;
+  padding-left: 40px;
+  transition: 0.2s ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.uk-search-products {
+  border: solid 1px #dee6ed;
+  box-shadow: 0 4px 2px 1px rgba(0,0,0,.1);
+  position: absolute;
+  top: 40px;
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 250px;
+  width: calc(100% - 2px);
+  z-index: 100;
+}
+
+.uk-search-products-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  &:hover {
+    background: #46569e;
+    color: white;
+  }
+}
+
+.search-loading {
+  padding: 10px 15px;
+}
+
+.uk-products {
+  min-height: 250px;
+  margin-top: 15px;
+}
+
+.uk-table th {
+  padding: 16px 12px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 11px;
+  font-weight: normal;
+  color: #8d9ab1;
+  text-transform: uppercase;
+}
+
+.uk-nav-default {
+  font-size: 11px;
+  font-family: Montserrat;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+}
+
+.uk-nav-default > li.uk-active > a {
+  color: #314483;
+  background-color: transparent;
+}
+
+.uk-list-striped > li:nth-of-type(odd) {
+  background: #e5edf4;
+}
+
+.uk-list-striped > li:nth-of-type(odd) {
+  border-top: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+}
+
+.uk-form-label {
+  font-size: 11px;
+  color: #314483;
+  font-family: Montserrat;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+}
+
+.uk-input, .uk-select, .uk-textarea {
+  border: 0 none;
+  border: 1px solid #dee6ed;
+  background: #eef6fa;
+  border-radius: 2px;
+  color: #4f5a80;
+  padding: 0 10px;
+  max-width: 100%;
+  transition: 0.2s ease-in-out;
+  transition-property: color, background-color, border;
+  transition-property: color, background-color, border-color, box-shadow;
+  width: 100%;
+}
+
+.uk-input, .uk-select:not([multiple]):not([size]) {
+  border: 1px solid #dee6ed;
+  height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+  outline: none;
+  background-color: #fff;
+  color: #314483;
+  border-color: #fff;
+  border-color: #fff !important;
+  box-shadow: 0 6px 15px 0 rgba(85, 95, 109, 0.1);
+}
+
+.uk-alert-danger {
+  background: #fff;
+  color: #d95e60;
+}
+
+.uk-text-danger {
+  color: #d95e60 !important;
+  font-size: 11px;
+}
+
+
+.uk-table-total .uk-input.text-right {
+  text-align: right !important;
+}
+
+.pg-product-list {
+
+  &__item {
+
+    display: flex;
+
+    .product-picture {
+      height: 60px;
+      width: 60px;
+      margin: 0;
+    }
+
+    .product-picture img {
+      width: 90%;
+    }
+
+    .product-name {
+      flex: 1 1 auto;
+    }
+
+    .product-price {
+      color: green;
+    }
+
+  }
+
+}
+
+@media (min-width: 960px) {
+
+  .uk-form-horizontal.selling .uk-form-label {
+    width: 100px;
+  }
+
+  .uk-form-horizontal.selling .uk-form-controls {
+    margin-left: 115px;
+  }
+}
+

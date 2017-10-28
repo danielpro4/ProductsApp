@@ -1,0 +1,31 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500");
+
+// Variables
+// @import "_variables";
+
+// Bootstrap
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+$inverse-global-color: #632d91;
+
+// UIkit Core@import "node_modules/uikit/src/scss/uikit.scss";
+
+// 1. Your custom variables and variable overwrites.
+$global-link-color: #bb2782;
+
+// 2. Import default variables and available mixins.
+@import "node_modules/uikit/src/scss/variables-theme.scss";
+@import "node_modules/uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "node_modules/uikit/src/scss/uikit-theme.scss";
+
+// 5. Import UIkit-Theme.
+@import "uikit-theme";
+
+
+// https://scotch.io/tutorials/build-search-functionality-with-laravel-scout-and-vue-js
