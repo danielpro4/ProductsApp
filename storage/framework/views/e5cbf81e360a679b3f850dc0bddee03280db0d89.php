@@ -61,6 +61,12 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .img-responsive {
+                height: auto;
+                width: 100%;
+                max-width: 500px;
+            }
         </style>
     </head>
     <body>
@@ -68,7 +74,7 @@
             <?php if(Route::has('login')): ?>
                 <div class="top-right links">
                     <?php if(auth()->guard()->check()): ?>
-                        <a href="<?php echo e(url('/pricing')); ?>">Home</a>
+                        <a href="<?php echo e(url('/selling')); ?>">Ventas</a>
                     <?php else: ?>
                         <a href="<?php echo e(route('login')); ?>">Login</a>
                         <a href="<?php echo e(route('register')); ?>">Register</a>
@@ -78,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Tecno Ink Lasser
+                    <img src="/images/logo-color.png" alt="Tecno Ink Lasser" class="img-responsive"/>
                 </div>
 
                 <div class="links">

@@ -14859,6 +14859,10 @@ h5,
   margin-top: 15px;
 }
 
+.uk-text-small {
+  font-weight: normal;
+}
+
 .uk-table th {
   padding: 16px 12px;
   text-align: left;

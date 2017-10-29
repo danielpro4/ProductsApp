@@ -26,20 +26,14 @@
             <?php echo $__env->make('partials.alerts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
             <?php echo $__env->yieldContent('main-panel-before'); ?>
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-header">
-                    <?php echo $__env->yieldContent('title'); ?>
-                </div>
-                <div class="uk-card-body">
-                    <?php echo $__env->yieldContent('main-panel-content'); ?>
-                </div>
-                <div class="uk-card-footer">
-                    <?php echo $__env->yieldContent('main-panel-footer'); ?>
-                </div>
-            </div>
-            <?php echo $__env->yieldContent('main-panel-after'); ?>
 
-            <?php echo $__env->yieldContent('additional-panels'); ?>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-header"> <?php echo $__env->yieldContent('panel-header'); ?> </div>
+                <div class="uk-card-body"> <?php echo $__env->yieldContent('panel-content'); ?> </div>
+                <div class="uk-card-footer"> <?php echo $__env->yieldContent('panel-footer'); ?></div>
+            </div>
+
+            <?php echo $__env->yieldContent('main-panel-after'); ?>
 
             <div class="uk-margin-top">
                 <?php echo $__env->make('partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

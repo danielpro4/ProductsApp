@@ -62,7 +62,7 @@ class UsersController extends BaseController
      */
     public function view(User $user)
     {
-        return view($this->namespace . 'users.view', [
+        return view($this->namespace . 'users.form', [
             'user'  => $user,
         ]);
     }
@@ -88,7 +88,7 @@ class UsersController extends BaseController
     {
         $user = $this->users->update($request->all(), $user);
 
-        return redirect()->route('user.view', $user)
+        return redirect()->route('user.form', $user)
             ->with('user', $user)
             ->with('success', 'Usuario actualizado correctamente');
     }

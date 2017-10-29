@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends('layouts.app')
 @section('page-title')
     @parent
     - Login
@@ -8,12 +8,12 @@
     <form class="uk-form-horizontal" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
 
-        @section('title')
+        @section('panel-header')
             <div class="uk-flex uk-flex-between uk-flex-middle">
                 <h4 class="uk-card-title uk-margin-remove">Iniciar Sesión</h4>
             </div>
         @stop
-        @section('main-panel-content')
+        @section('panel-content')
             <div class="uk-margin{{ $errors->has('email') ? ' has-error' : '' }}">
                 <label for="email" class="uk-form-label">E-Mail Address</label>
 
@@ -52,7 +52,7 @@
                 </div>
             </div>
         @stop
-        @section('main-panel-footer')
+        @section('panel-footer')
             <button type="submit" class="uk-button uk-button-primary uk-button-small">
                 Login
             </button>

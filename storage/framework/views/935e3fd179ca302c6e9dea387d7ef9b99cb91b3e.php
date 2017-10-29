@@ -25,6 +25,7 @@
                 <?php else: ?>
                     <li>
                         <a href="#"><?php echo e(Auth::user()->name); ?> <span class="caret"></span></a>
+
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li>

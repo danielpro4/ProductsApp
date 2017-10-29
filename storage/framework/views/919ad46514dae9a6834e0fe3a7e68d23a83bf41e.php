@@ -6,13 +6,13 @@
     <form action="<?php echo e(request()->fullUrl()); ?>" method="POST" class="uk-form-horizontal">
         <?php echo e(csrf_field()); ?>
 
-        <?php $__env->stopSection(); ?>
-        <?php $__env->startSection('title'); ?>
+<?php $__env->stopSection(); ?>
+        <?php $__env->startSection('panel-header'); ?>
             <div class="uk-flex uk-flex-between uk-flex-middle">
                 <h5 class="uk-card-title uk-margin-remove"><?php echo e($user->exists ? 'Actualizar' : 'Crear'); ?> Usuario</h5>
             </div>
         <?php $__env->stopSection(); ?>
-        <?php $__env->startSection('main-panel-content'); ?>
+        <?php $__env->startSection('panel-content'); ?>
             <div class="uk-margin">
                 <label class="uk-form-label">Nombre</label>
                 <div class="uk-form-controls">
@@ -35,11 +35,11 @@
                 </div>
             </div>
         <?php $__env->stopSection(); ?>
-        <?php $__env->startSection('main-panel-footer'); ?>
+        <?php $__env->startSection('panel-footer'); ?>
             <button class="uk-button uk-button-primary uk-button-small" type="submit">Guardar</button>
         <?php $__env->stopSection(); ?>
 
-        <?php $__env->startSection('main-panel-after'); ?>
+<?php $__env->startSection('main-panel-after'); ?>
     </form>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

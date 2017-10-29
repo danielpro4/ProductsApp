@@ -2,7 +2,7 @@
     ##parent-placeholder-f4a7fc8c543204b13cdacff162f6030819d5ae37##
     - Productos
 <?php $__env->stopSection(); ?>
-<?php $__env->startSection('title'); ?>
+<?php $__env->startSection('panel-header'); ?>
     <div class="uk-flex uk-flex-between uk-flex-middle">
         <h1 class="uk-card-title uk-margin-remove">
             Productos
@@ -26,7 +26,7 @@
         </form>
     </div>
 <?php $__env->stopSection(); ?>
-<?php $__env->startSection('main-panel-content'); ?>
+<?php $__env->startSection('panel-content'); ?>
     <table class="uk-table uk-table-middle uk-table-responsive uk-table-divider uk-table-hover" cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -68,7 +68,7 @@
     </table>
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('main-panel-footer'); ?>
+<?php $__env->startSection('panel-footer'); ?>
     <a class="uk-button uk-button-primary uk-button-small" href="<?php echo e(route('product.create')); ?>">Nuevo Producto</a>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make("layouts.app", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

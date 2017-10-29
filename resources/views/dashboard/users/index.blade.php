@@ -3,7 +3,7 @@
     @parent
     - Usuarios
 @stop
-@section('title')
+@section('panel-header')
     <div class="uk-flex uk-flex-between uk-flex-middle">
         <h4 class="uk-card-title uk-margin-remove">Usuarios</h4>
         <form class="uk-display-inline uk-search uk-search-default">
@@ -20,7 +20,7 @@
         </form>
     </div>
 @stop
-@section('main-panel-content')
+@section('panel-content')
     <table class="uk-table uk-table-middle uk-table-responsive uk-table-divider uk-table-hov2er" cellpadding="0" cellspacing="0" class="mb1">
         <thead>
             <tr>
@@ -56,6 +56,6 @@
     </table>
 @stop
 
-@section('main-panel-footer')
+@section('panel-footer')
     <a class="uk-button uk-button-primary uk-button-small" href="{{route('user.create')}}">Nuevo usuario</a>
 @stop

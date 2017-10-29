@@ -7,12 +7,12 @@
     <form action="{{ request()->fullUrl() }}" method="POST" class="uk-form-horizontal">
         {{csrf_field()}}
         @stop
-        @section('title')
+        @section('panel-header')
             <div class="uk-flex uk-flex-between uk-flex-middle">
                 <h5 class="uk-card-title uk-margin-remove">{{ $product->exists ? 'Actualizar' : 'Crear'}} Producto</h5>
             </div>
         @stop
-        @section('main-panel-content')
+        @section('panel-content')
             <div class="uk-margin">
                 <label class="uk-form-label">SKU</label>
                 <div class="uk-form-controls">
@@ -144,7 +144,7 @@
              </div>
 
         @stop
-        @section('main-panel-footer')
+        @section('panel-footer')
             <button class="uk-button uk-button-primary uk-button-small" type="submit">Guardar</button>
         @stop
 

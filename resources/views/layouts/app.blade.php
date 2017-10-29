@@ -26,20 +26,14 @@
             @include('partials.alerts')
 
             @yield('main-panel-before')
-            <div class="uk-card uk-card-default">
-                <div class="uk-card-header">
-                    @yield('title')
-                </div>
-                <div class="uk-card-body">
-                    @yield('main-panel-content')
-                </div>
-                <div class="uk-card-footer">
-                    @yield('main-panel-footer')
-                </div>
-            </div>
-            @yield('main-panel-after')
 
-            @yield('additional-panels')
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-header"> @yield('panel-header')</div>
+                <div class="uk-card-body"> @yield('panel-content')</div>
+                <div class="uk-card-footer"> @yield('panel-footer')</div>
+            </div>
+
+            @yield('main-panel-after')
 
             <div class="uk-margin-top">
                 @include('partials.footer')

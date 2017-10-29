@@ -4,7 +4,7 @@
     -  Registrar Venta
 @stop
 
-@section('title')
+@section('panel-header')
     <h1 class="uk-card-title">Ventas</h1>
     <form class="uk-form-horizontal selling">
         <div class="uk-margin">
@@ -23,7 +23,7 @@
     </form>
 @endsection
 
-@section('main-panel-content')
+@section('panel-content')
     <div class="uk-card-body">
         <div class="uk-flex uk-flex-between uk-flex-middle">
             <form class="uk-display-inline uk-search uk-search-default uk-search-selling uk-margin-right">
@@ -95,80 +95,80 @@
     </div>
 @endsection
 
-@section('main-panel-footer')
+@section('panel-footer')
     <table class="uk-table uk-table-total">
         <tbody>
-            <tr>
-                <td colspan="3">
-                    <div class="uk-margin-small">
-                        <input class="uk-input"
-                               placeholder="Cantidad con letra"
-                               name="letter"
-                               id="letter"
-                               v-model="order.letter"
-                               type="text">
-                    </div>
+        <tr>
+            <td colspan="3">
+                <div class="uk-margin-small">
+                    <input class="uk-input"
+                           placeholder="Cantidad con letra"
+                           name="letter"
+                           id="letter"
+                           v-model="order.letter"
+                           type="text">
+                </div>
 
-                    <div class="uk-margin-small">
+                <div class="uk-margin-small">
                         <textarea name="notes" id="notes"
                                   v-model="order.notes"
                                   cols="30" rows="4"
                                   class="uk-textarea"
                                   placeholder="Notas"></textarea>
-                    </div>
-                </td>
-                <td class="uk-width-medium">
-                    <div class="uk-form-horizontal selling">
-                        <div class="uk-margin-small">
-                            <label for="subtotal" class="uk-form-label">Sub Total: </label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input text-right"
-                                       placeholder="SubTotal"
-                                       name="subtotal"
-                                       id="subtotal"
-                                       v-model="order.subtotal"
-                                       type="text">
-                            </div>
-                        </div>
-
-                        <div class="uk-margin-small">
-                            <label for="discount" class="uk-form-label">Descuento: </label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input text-right"
-                                       placeholder="Descuento"
-                                       name="discount"
-                                       id="discount"
-                                       v-model="order.discount"
-                                       type="text">
-                            </div>
-                        </div>
-
-                        <div class="uk-margin-small">
-                            <label for="vat" class="uk-form-label">IVA: </label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input text-right"
-                                       placeholder="IVA"
-                                       name="vat"
-                                       id="vat"
-                                       v-model="order.vat"
-                                       type="text">
-                            </div>
-                        </div>
-
-                        <div class="uk-margin-small">
-                            <label for="total" class="uk-form-label">Total: </label>
-                            <div class="uk-form-controls">
-                                <input class="uk-input uk-form-large text-right"
-                                       placeholder="Total"
-                                       name="total"
-                                       id="total"
-                                       v-model="order.total"
-                                       type="text">
-                            </div>
+                </div>
+            </td>
+            <td class="uk-width-medium">
+                <div class="uk-form-horizontal selling">
+                    <div class="uk-margin-small">
+                        <label for="subtotal" class="uk-form-label">Sub Total: </label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input text-right"
+                                   placeholder="SubTotal"
+                                   name="subtotal"
+                                   id="subtotal"
+                                   v-model="order.subtotal"
+                                   type="text">
                         </div>
                     </div>
-                </td>
-            </tr>
+
+                    <div class="uk-margin-small">
+                        <label for="discount" class="uk-form-label">Descuento: </label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input text-right"
+                                   placeholder="Descuento"
+                                   name="discount"
+                                   id="discount"
+                                   v-model="order.discount"
+                                   type="text">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin-small">
+                        <label for="vat" class="uk-form-label">IVA: </label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input text-right"
+                                   placeholder="IVA"
+                                   name="vat"
+                                   id="vat"
+                                   v-model="order.vat"
+                                   type="text">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin-small">
+                        <label for="total" class="uk-form-label">Total: </label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input uk-form-large text-right"
+                                   placeholder="Total"
+                                   name="total"
+                                   id="total"
+                                   v-model="order.total"
+                                   type="text">
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
         </tbody>
     </table>
 @endsection

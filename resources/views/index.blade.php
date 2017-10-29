@@ -61,6 +61,12 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .img-responsive {
+                height: auto;
+                width: 100%;
+                max-width: 500px;
+            }
         </style>
     </head>
     <body>
@@ -68,7 +74,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/pricing') }}">Home</a>
+                        <a href="{{ url('/selling') }}">Ventas</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -78,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Tecno Ink Lasser
+                    <img src="/images/logo-color.png" alt="Tecno Ink Lasser" class="img-responsive"/>
                 </div>
 
                 <div class="links">

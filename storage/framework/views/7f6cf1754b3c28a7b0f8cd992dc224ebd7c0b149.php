@@ -7,12 +7,12 @@
         <?php echo e(csrf_field()); ?>
 
         <?php $__env->stopSection(); ?>
-        <?php $__env->startSection('title'); ?>
+        <?php $__env->startSection('panel-header'); ?>
             <div class="uk-flex uk-flex-between uk-flex-middle">
                 <h5 class="uk-card-title uk-margin-remove"><?php echo e($product->exists ? 'Actualizar' : 'Crear'); ?> Producto</h5>
             </div>
         <?php $__env->stopSection(); ?>
-        <?php $__env->startSection('main-panel-content'); ?>
+        <?php $__env->startSection('panel-content'); ?>
             <div class="uk-margin">
                 <label class="uk-form-label">SKU</label>
                 <div class="uk-form-controls">
@@ -144,7 +144,7 @@
              </div>
 
         <?php $__env->stopSection(); ?>
-        <?php $__env->startSection('main-panel-footer'); ?>
+        <?php $__env->startSection('panel-footer'); ?>
             <button class="uk-button uk-button-primary uk-button-small" type="submit">Guardar</button>
         <?php $__env->stopSection(); ?>
 
