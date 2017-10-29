@@ -19,7 +19,7 @@
 
 <main id="root" class="uk-container uk-container-expand">
     <div class="uk-grid">
-        <aside class="uk-width-1-6@l uk-margin-top uk-margin-bottom">
+        <aside class="uk-width-1-6@m uk-margin-top uk-margin-bottom">
             <?php echo $__env->make('partials.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </aside>
         <section class="uk-width-expand@m uk-margin-top">
@@ -30,7 +30,7 @@
             <div class="uk-card uk-card-default">
                 <div class="uk-card-header"> <?php echo $__env->yieldContent('panel-header'); ?> </div>
                 <div class="uk-card-body"> <?php echo $__env->yieldContent('panel-content'); ?> </div>
-                <div class="uk-card-footer"> <?php echo $__env->yieldContent('panel-footer'); ?></div>
+                <div class="uk-card-footer"> <?php echo $__env->yieldContent('panel-footer'); ?> </div>
             </div>
 
             <?php echo $__env->yieldContent('main-panel-after'); ?>

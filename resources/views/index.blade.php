@@ -1,97 +1,112 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>- Tecno Ink Lasser -</title>
+    <title>Tecno Ink Lasser</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+    <!-- Styles -->
+    <style>
+        html, body {
+            color: #fff;
+            font-family: 'Monserrat', sans-serif;
+            margin: 0;
+        }
 
-            .full-height {
-                height: 100vh;
-            }
+        body {
+            background: url(/images/home-header.jpg);
+            background-size: cover;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 0;
+        }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        body:after {
+            background: rgba(0, 0, 0, 0.3);
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
 
-            .position-ref {
-                position: relative;
-            }
+        .full-height {
+            height: 100%;
+            min-height: calc(100vh);
+        }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
 
-            .content {
-                text-align: center;
-            }
+        .position-ref {
+            position: relative;
+        }
 
-            .title {
-                font-size: 84px;
-            }
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-transform: uppercase;
-            }
+        .content {
+            text-align: center;
+            background: url(/images/splash.png) 50% 50% no-repeat;
+            background-size: contain;
+            padding: 135px 0;
+            max-width: 640px;
+            width: 100%;
+            z-index: 2;
+        }
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
+        .links {
+            z-index: 2;
+        }
 
-            .img-responsive {
-                height: auto;
-                width: 100%;
-                max-width: 500px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/selling') }}">Ventas</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+        .links > a {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: .1rem;
+            padding: 0 25px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
 
-            <div class="content">
-                <div class="title m-b-md">
-                    <img src="/images/logo-color.png" alt="Tecno Ink Lasser" class="img-responsive"/>
-                </div>
+        .img-responsive {
+            height: auto;
+            width: 100%;
+        }
 
-                <div class="links">
-                    <a href="https://www.grupocva.com/me_bpm/inicio_me.php">CVA</a>
-                    <a href="https://store.intcomex.com/es-XMX/Account/Login">Intcomex</a>
-                </div>
-            </div>
+    </style>
+</head>
+<body>
+<div class="flex-center position-ref full-height">
+    @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+                <a href="https://www.grupocva.com/me_bpm/inicio_me.php">CVA</a>
+                <a href="https://store.intcomex.com/es-XMX/Account/Login">Intcomex</a>
+                <a href="{{ url('/selling') }}">Ventas</a>
+            @else
+                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('register') }}">Register</a>
+            @endauth
         </div>
-    </body>
+    @endif
+
+    <div class="content">
+        <img src="/images/logo.png" alt="Tecno Ink Lasser" class="img-responsive"/>
+    </div>
+</div>
+</body>
 </html>

@@ -19,7 +19,7 @@
 
 <main id="root" class="uk-container uk-container-expand">
     <div class="uk-grid">
-        <aside class="uk-width-1-6@l uk-margin-top uk-margin-bottom">
+        <aside class="uk-width-1-6@m uk-margin-top uk-margin-bottom">
             @include('partials.sidebar')
         </aside>
         <section class="uk-width-expand@m uk-margin-top">
@@ -28,9 +28,9 @@
             @yield('main-panel-before')
 
             <div class="uk-card uk-card-default">
-                <div class="uk-card-header"> @yield('panel-header')</div>
-                <div class="uk-card-body"> @yield('panel-content')</div>
-                <div class="uk-card-footer"> @yield('panel-footer')</div>
+                <div class="uk-card-header"> @yield('panel-header') </div>
+                <div class="uk-card-body"> @yield('panel-content') </div>
+                <div class="uk-card-footer"> @yield('panel-footer') </div>
             </div>
 
             @yield('main-panel-after')
