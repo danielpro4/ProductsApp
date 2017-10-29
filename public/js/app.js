@@ -17909,7 +17909,7 @@ window.Vue = __webpack_require__(34);
 
 
 
-if (document.querySelector('#selling')) {
+if (document.querySelector('#root')) {
 
     // highlight filter
     Vue.filter('highlight', function (words, query) {
@@ -17920,11 +17920,12 @@ if (document.querySelector('#selling')) {
     });
 
     var app = new Vue({
-        el: '#selling',
+        el: '#root',
         /**
          * The component´s data.
          */
         data: function data() {
+
             return {
                 products: [],
 
@@ -17982,7 +17983,6 @@ if (document.querySelector('#selling')) {
             handleItemClick: function handleItemClick(product) {
 
                 if (product) {
-
                     this.selectedProduct = product;
                     this.searchQuery = '(' + this.selectedProduct.sku + ') - ' + this.selectedProduct.name;
 
@@ -17990,6 +17990,7 @@ if (document.querySelector('#selling')) {
                 }
             },
             handleAddProduct: function handleAddProduct() {
+
                 if (this.selectedProduct) {
 
                     var priceStr = this.selectedProduct['sellingpricewithvat'];
@@ -18039,6 +18040,7 @@ if (document.querySelector('#selling')) {
                 var _this2 = this;
 
                 __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/v1/products').then(function (response) {
+                    console.log(response);
                     _this2.products = response.data.products;
                 });
             },

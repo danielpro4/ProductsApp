@@ -23,7 +23,7 @@ window.Vue = require('vue');
 import axios from 'axios';
 import _ from 'lodash';
 
-if (document.querySelector('#selling')) {
+if (document.querySelector('#root')) {
 
     // highlight filter
     Vue.filter('highlight', function(words, query) {
@@ -34,11 +34,12 @@ if (document.querySelector('#selling')) {
     });
 
     const app = new Vue({
-        el: '#selling',
+        el: '#root',
         /**
          * The component´s data.
          */
         data() {
+
             return {
                 products: [],
 
@@ -50,7 +51,7 @@ if (document.querySelector('#selling')) {
                     total: 0,
                     letter: '',
                     notes: '',
-                    items: [],
+                    items: []
                 },
 
                 searchQuery: 'Usb 32GB ',
@@ -96,17 +97,16 @@ if (document.querySelector('#selling')) {
             handleItemClick(product) {
 
                 if (product) {
-
                     this.selectedProduct = product;
                     this.searchQuery = `(${this.selectedProduct.sku}) - ${this.selectedProduct.name}`;
 
                     this.isOpen = false;
                 }
 
-
             },
 
             handleAddProduct() {
+
                 if (this.selectedProduct) {
 
                     let priceStr = this.selectedProduct['sellingpricewithvat'];
@@ -155,6 +155,7 @@ if (document.querySelector('#selling')) {
             getProducts() {
                 axios.get('/api/v1/products')
                     .then(response => {
+                        console.log(response);
                         this.products = response.data.products;
                     });
             },

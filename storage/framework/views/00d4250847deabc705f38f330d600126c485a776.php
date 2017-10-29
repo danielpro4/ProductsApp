@@ -1,10 +1,9 @@
-@extends("layouts.app")
-@section('page-title')
-    @parent
+<?php $__env->startSection('page-title'); ?>
+    ##parent-placeholder-f4a7fc8c543204b13cdacff162f6030819d5ae37##
     -  Registrar Venta
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('title')
+<?php $__env->startSection('title'); ?>
     <h1 class="uk-card-title">Ventas</h1>
     <form class="uk-form-horizontal selling">
         <div class="uk-margin">
@@ -15,15 +14,15 @@
                        id="customer"
                        v-model="order.customer"
                        type="text">
-                @if($errors->has('customer'))
-                    <div class="uk-text-danger">{{$errors->first('customer')}}</div>
-                @endif
+                <?php if($errors->has('customer')): ?>
+                    <div class="uk-text-danger"><?php echo e($errors->first('customer')); ?></div>
+                <?php endif; ?>
             </div>
         </div>
     </form>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('main-panel-content')
+<?php $__env->startSection('main-panel-content'); ?>
     <div class="uk-card-body">
         <div class="uk-flex uk-flex-between uk-flex-middle">
             <form class="uk-display-inline uk-search uk-search-default uk-search-selling uk-margin-right">
@@ -51,7 +50,7 @@
                         (<span v-html="product.sku"></span>) - <span v-html="product.name "></span> $ <span
                                 v-html="product.sellingpricewithvat"></span>
                     </div>
-                    <div class="search-loading uk-text-small">@{{searching}}</div>
+                    <div class="search-loading uk-text-small">{{searching}}</div>
                 </div>
             </form>
 
@@ -74,9 +73,9 @@
                 <tbody v-if="order.items.length">
                 <tr v-for="item in order.items">
                     <td><input class="uk-input" type="text" v-model="item.qty"/></td>
-                    <td>@{{item.product}}</td>
+                    <td>{{item.product}}</td>
                     <td class="text-right"><input class="uk-input" type="text" v-model="item.price"/></td>
-                    <td class="text-right">$ @{{item.amount}}</td>
+                    <td class="text-right">$ {{item.amount}}</td>
                     <td>
                         <button class="uk-button uk-button-small uk-button-danger" type="button">Eliminar</button>
                     </td>
@@ -93,9 +92,9 @@
             </table>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('main-panel-footer')
+<?php $__env->startSection('main-panel-footer'); ?>
     <table class="uk-table uk-table-total">
         <tbody>
             <tr>
@@ -171,4 +170,5 @@
             </tr>
         </tbody>
     </table>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make("layouts.app", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

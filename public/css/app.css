@@ -14710,7 +14710,6 @@ h5,
   background: linear-gradient(to left, #28a5f5, #1e87f0);
   background: -webkit-gradient(linear, right top, left top, from(#632d91), to(#bb2782));
   background: linear-gradient(to left, #632d91, #bb2782);
-  position: fixed;
   z-index: 1;
   width: 100%;
 }
@@ -14723,10 +14722,6 @@ h5,
 .uk-logo img {
   height: auto;
   width: 160px;
-}
-
-.uk-section {
-  padding-top: 70px;
 }
 
 .uk-navbar-nav > li > a,

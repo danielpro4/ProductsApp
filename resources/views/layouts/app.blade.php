@@ -17,34 +17,34 @@
 
 @include('partials.nav')
 
-<main id="root">
-    <div class="uk-container uk-section">
-        <div class="uk-grid">
+<main id="root" class="uk-container uk-container-expand">
+    <div class="uk-grid">
+        <aside class="uk-width-1-6@l uk-margin-top uk-margin-bottom">
             @include('partials.sidebar')
-            <section class="uk-width-5-6@l">
-                @include('partials.alerts')
+        </aside>
+        <section class="uk-width-expand@m uk-margin-top">
+            @include('partials.alerts')
 
-                @yield('main-panel-before')
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-header">
-                        @yield('title')
-                    </div>
-                    <div class="uk-card-body">
-                        @yield('main-panel-content')
-                    </div>
-                    <div class="uk-card-footer">
-                        @yield('main-panel-footer')
-                    </div>
+            @yield('main-panel-before')
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-header">
+                    @yield('title')
                 </div>
-                @yield('main-panel-after')
-
-                @yield('additional-panels')
-
-                <div class="uk-margin-top">
-                    @include('partials.footer')
+                <div class="uk-card-body">
+                    @yield('main-panel-content')
                 </div>
-            </section>
-        </div>
+                <div class="uk-card-footer">
+                    @yield('main-panel-footer')
+                </div>
+            </div>
+            @yield('main-panel-after')
+
+            @yield('additional-panels')
+
+            <div class="uk-margin-top">
+                @include('partials.footer')
+            </div>
+        </section>
     </div>
 </main>
 

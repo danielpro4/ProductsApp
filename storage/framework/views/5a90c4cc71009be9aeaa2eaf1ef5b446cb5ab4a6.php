@@ -1,7 +1,7 @@
 <ul class="uk-nav uk-nav-default">
 
-    <li class="{{ str_contains(url()->current(), 'pricing') ? 'uk-active' : '' }}">
-        <a href="{{url('/pricing')}}" class="uk-flex uk-flex-middle">
+    <li class="<?php echo e(str_contains(url()->current(), 'pricing') ? 'uk-active' : ''); ?>">
+        <a href="<?php echo e(url('/pricing')); ?>" class="uk-flex uk-flex-middle">
             <icon name="clock" :scale="100" class="uk-visible@m uk-margin-small-right uk-icon">
                 <svg version="1.1" role="presentation" width="17.857142857142858" height="17.857142857142858"
                      viewBox="0 0 20 20" class="uk-visible@m uk-margin-small-right uk-icon svg-icon active"
@@ -15,8 +15,8 @@
         </a>
     </li>
 
-    <li class="{{ str_contains(url()->current(), 'selling') ? 'uk-active' : '' }}">
-        <a href="{{url('/selling')}}" class="uk-flex uk-flex-middle">
+    <li class="<?php echo e(str_contains(url()->current(), 'selling') ? 'uk-active' : ''); ?>">
+        <a href="<?php echo e(url('/selling')); ?>" class="uk-flex uk-flex-middle">
             <icon name="clock" :scale="100" class="uk-visible@m uk-margin-small-right uk-icon">
                 <svg version="1.1" role="presentation" width="17.857142857142858" height="17.857142857142858"
                      viewBox="0 0 20 20" class="uk-visible@m uk-margin-small-right uk-icon svg-icon active"
@@ -30,8 +30,8 @@
         </a>
     </li>
 
-    <li class="{{ str_contains(url()->current(), 'products') ? 'uk-active' : '' }}">
-        <a href="{{route('products.all')}}" class="uk-flex uk-flex-middle">
+    <li class="<?php echo e(str_contains(url()->current(), 'products') ? 'uk-active' : ''); ?>">
+        <a href="<?php echo e(route('products.all')); ?>" class="uk-flex uk-flex-middle">
             <icon name="clock" :scale="100" class="uk-visible@m uk-margin-small-right uk-icon">
                 <svg version="1.1" role="presentation" width="17.857142857142858" height="17.857142857142858"
                      viewBox="0 0 20 20" class="uk-visible@m uk-margin-small-right uk-icon svg-icon active"
@@ -45,8 +45,8 @@
         </a>
     </li>
 
-    <li class="{{ str_contains(url()->current(), 'users') ? 'uk-active' : '' }}">
-        <a href="{{route('users.all')}}" class="uk-flex uk-flex-middle">
+    <li class="<?php echo e(str_contains(url()->current(), 'users') ? 'uk-active' : ''); ?>">
+        <a href="<?php echo e(route('users.all')); ?>" class="uk-flex uk-flex-middle">
             <icon name="clock" :scale="100" class="uk-visible@m uk-margin-small-right uk-icon">
                 <svg version="1.1" role="presentation" width="17.857142857142858" height="17.857142857142858"
                      viewBox="0 0 20 20" class="uk-visible@m uk-margin-small-right uk-icon svg-icon active"
